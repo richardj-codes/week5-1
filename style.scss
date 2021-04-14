@@ -1,0 +1,221 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	font-family: "Poppins", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+html {
+	/* resetting font size to 10px makes rem math much easier*/
+	font-size: 10px;
+	box-sizing: border-box;
+	background: hsl(257, 40%, 49%);
+}
+
+/* Set core body defaults */
+body {
+	height: 100%;
+	width: 100vw;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	font-family: "Open Sans", sans-serif;
+	background: url(/img/bg-mobile.svg) no-repeat top/contain;
+	color: white;
+}
+P,
+li {
+	font-size: 1.4rem;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+a {
+	text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+/* ########## END GLOBAL ########## */
+
+main {
+	width: 80vw;
+	margin: 0 auto;
+}
+// ##MOCKUP SECTION
+header img {
+	width: 120px;
+	padding-top: 2rem;
+	margin-bottom: 3rem;
+}
+// ##CONTENT SECTION
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.mockups {
+	margin-bottom: 3rem;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 2.5rem;
+	text-align: center;
+	text-transform: capitalize;
+	margin-bottom: 2rem;
+}
+.content p {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+button {
+	width: 20rem;
+	height: 5.5rem;
+	border-radius: 35px;
+	font-size: 1.6rem;
+	color: hsl(257, 40%, 49%);
+	margin-bottom: 2rem;
+	outline: none;
+	cursor: pointer;
+	box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.425);
+}
+button:active {
+	transform: scale(0.8);
+	background: hsl(300, 69%, 71%);
+	color: white;
+}
+
+// ##SOCIAL SECTION
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.social .fab {
+	border-radius: 50%;
+	border: white 1px solid;
+	width: 35px;
+	height: 35px;
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	margin-right: 2rem;
+}
+.social .fab:active {
+	color: hsl(300, 69%, 71%);
+	border: hsl(300, 69%, 71%) 1px solid;
+}
+
+// ##MEDIA QUERIES
+@media screen and (min-width: 1440px) {
+	body {
+		min-height: 750px;
+
+		background: url(/img/bg-desktop.svg) center / cover no-repeat;
+	}
+	main {
+		width: 90vw;
+		height: 100vh;
+		margin: 0 auto;
+	}
+	header img {
+		width: 220px;
+		padding-top: 8rem;
+		margin-bottom: 16rem;
+	}
+	.mockups img {
+		width: 170rem;
+	}
+	h2 {
+		font-weight: 600;
+		font-size: 5rem;
+		text-align: center;
+		text-transform: capitalize;
+		margin-bottom: 2rem;
+		text-align: left;
+	}
+	.content p {
+		text-align: left;
+		margin-bottom: 2rem;
+		font-size: 1.6rem;
+	}
+
+	.wrapper {
+		display: flex;
+		align-items: center;
+
+		gap: 4rem;
+	}
+	button {
+		align-self: flex-start;
+	}
+	.container {
+		position: relative;
+	}
+	.social {
+		position: absolute;
+		bottom: 5%;
+		right: 5%;
+	}
+}
