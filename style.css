@@ -50,7 +50,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Open Sans", sans-serif;
-  background: url(/img/bg-mobile.svg) no-repeat top/contain;
+  background: url("img/bg-mobile.svg") no-repeat top/contain;
   color: white;
 }
 
@@ -205,7 +205,7 @@ button:active {
 @media screen and (min-width: 1440px) {
   body {
     min-height: 750px;
-    background: url(/img/bg-desktop.svg) center/cover no-repeat;
+    background: url("/img/bg-desktop.svg") center/cover no-repeat;
   }
   main {
     width: 90vw;
