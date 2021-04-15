@@ -204,8 +204,7 @@ button:active {
 
 @media screen and (min-width: 1440px) {
   body {
-    min-height: 750px;
-    background: url("/img/bg-desktop.svg") center/cover no-repeat;
+    background: url("img/bg-desktop.svg") top/cover no-repeat;
   }
   main {
     width: 90vw;
@@ -215,7 +214,7 @@ button:active {
   header img {
     width: 220px;
     padding-top: 8rem;
-    margin-bottom: 16rem;
+    margin-bottom: 8rem;
   }
   .mockups img {
     width: 170rem;
